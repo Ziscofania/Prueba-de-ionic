@@ -1,17 +1,99 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-title>Dashboard Tab 2</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
+
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Dashboard Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <!-- 1 SEGMENT -->
+  <ion-segment value="users">
+    <ion-segment-button value="users">
+      <ion-label>Usuarios</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="sales">
+      <ion-label>Ventas</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- 2 PROGRESS BAR -->
+  <ion-progress-bar value="0.6"></ion-progress-bar>
+
+  <!-- 3 RANGE -->
+  <ion-item>
+    <ion-label>Volumen</ion-label>
+    <ion-range min="0" max="100"></ion-range>
+  </ion-item>
+
+  <!-- 4 RADIO GROUP -->
+  <ion-list>
+    <ion-radio-group value="angular">
+      <ion-list-header>
+        <ion-label>Framework favorito</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Angular</ion-label>
+        <ion-radio slot="start" value="angular"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>React</ion-label>
+        <ion-radio slot="start" value="react"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <!-- 5 SELECT -->
+  <ion-item>
+    <ion-label>País</ion-label>
+    <ion-select placeholder="Selecciona uno">
+      <ion-select-option value="col">Colombia</ion-select-option>
+      <ion-select-option value="mex">México</ion-select-option>
+      <ion-select-option value="esp">España</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- 6 TEXTAREA -->
+  <ion-item>
+    <ion-label position="floating">Descripción</ion-label>
+    <ion-textarea></ion-textarea>
+  </ion-item>
+
+  <!-- 7 CHIP -->
+  <ion-chip color="primary">
+    <ion-label>Activo</ion-label>
+  </ion-chip>
+
+  <!-- 8 AVATAR -->
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label>Usuario Demo</ion-label>
+  </ion-item>
+
+  <!-- 9 ALERT BUTTON -->
+  <ion-button expand="block" id="alertBtn">
+    Mostrar Alerta
+  </ion-button>
+
+  <ion-alert
+    trigger="alertBtn"
+    header="Confirmación"
+    message="¿Deseas continuar?"
+    [buttons]="['Cancelar', 'OK']">
+  </ion-alert>
+
+  <!-- 10 SPINNER -->
+  <div style="display:flex; justify-content:center; margin-top:20px;">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+
 </ion-content>

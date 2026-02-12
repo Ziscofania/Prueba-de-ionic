@@ -1,17 +1,107 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title>Dashboard Tab 3</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
+
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Dashboard Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <!-- 1 SEGMENT SCROLLABLE -->
+  <ion-segment scrollable="true" value="heart">
+    <ion-segment-button value="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="heart">
+      <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="pin">
+      <ion-icon name="pin"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="star">
+      <ion-icon name="star"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="call">
+      <ion-icon name="call"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- 2 GRID -->
+  <ion-grid>
+    <ion-row>
+
+      <!-- CARD 1 -->
+      <ion-col size="12" size-md="6">
+        <ion-card>
+          <img src="https://images.unsplash.com/photo-1556983257-71fddc36bc75" />
+          <ion-card-header>
+            <ion-card-title>Rhinoceros</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Animal fuerte con uno o dos cuernos.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <!-- CARD 2 -->
+      <ion-col size="12" size-md="6">
+        <ion-card>
+          <img src="https://images.unsplash.com/photo-1573551089778-46a7abc39d9f" />
+          <ion-card-header>
+            <ion-card-title>Sea Turtle</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Tortuga marina adaptada para nadar grandes distancias.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <!-- CARD 3 -->
+      <ion-col size="12" size-md="6">
+        <ion-card>
+          <img src="https://images.unsplash.com/photo-1577114995803-d8ce0e2b4aa9" />
+          <ion-card-header>
+            <ion-card-title>Giraffe</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            El animal más alto del mundo.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <!-- CARD 4 -->
+      <ion-col size="12" size-md="6">
+        <ion-card>
+          <img src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44" />
+          <ion-card-header>
+            <ion-card-title>Elephant</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            El mamífero terrestre más grande.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <!-- 3 FAB BUTTON -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
 </ion-content>
+
+<!-- 4 FOOTER -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-title size="small">App Dashboard - Programación Móvil</ion-title>
+  </ion-toolbar>
+</ion-footer>

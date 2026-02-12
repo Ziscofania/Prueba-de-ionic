@@ -1,17 +1,60 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Dashboard
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- SEARCH -->
+  <ion-searchbar placeholder="Buscar..."></ion-searchbar>
+
+  <!-- BUTTON -->
+  <ion-button expand="block">
+    Botón Básico
+  </ion-button>
+
+  <!-- INPUT -->
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <!-- CARD -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Tarjeta</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Este es un ejemplo básico de card.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- LIST -->
+  <ion-list>
+    <ion-item>Elemento 1</ion-item>
+    <ion-item>Elemento 2</ion-item>
+  </ion-list>
+
+  <!-- TOGGLE -->
+  <ion-item>
+    <ion-label>Activar opción</ion-label>
+    <ion-toggle></ion-toggle>
+  </ion-item>
+
+  <!-- CHECKBOX -->
+  <ion-item>
+    <ion-checkbox slot="start"></ion-checkbox>
+    <ion-label>Aceptar términos</ion-label>
+  </ion-item>
+
+  <!-- DATETIME -->
+  <ion-datetime presentation="date"></ion-datetime>
+
+  <ion-badge color="primary">
+    Nuevo
+  </ion-badge>
+
 </ion-content>
