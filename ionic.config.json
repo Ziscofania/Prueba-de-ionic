@@ -1,0 +1,7 @@
+{
+  "name": "dashboardApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
